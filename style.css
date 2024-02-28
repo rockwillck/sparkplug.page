@@ -82,8 +82,36 @@ li:before {
 }
 
 a {
-	color: white;
 	text-decoration: none;
+	color: black;
+}
+.content > a {
+	color: white;
 	background-color: black;
 	padding: 10px;
 }
+
+.nav {
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	width: 100vw;
+	padding: 10px;
+	z-index: 100;
+	height: 1.5em;
+	display: flex;
+	align-items: center;
+	background-image: url("background.jpeg");
+	background-size:400px;
+	background-position: center;
+	background-attachment: fixed;
+	box-shadow: 0 0 20px rgba(0, 0, 0, 0);
+	transition: 0.2s;
+}
+.nav > a {
+	margin-left: 10px;
+}
+.nav > img {
+	width:1.5em;
+}
+
