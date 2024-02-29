@@ -62,12 +62,11 @@ ul {
 	list-style: none;
 }
 li {
-	padding-left: 1em;
 	text-indent: -1em;
 }
 li:before {
 	content: "✽";
-	padding-right: 5px;
+	padding-right: 15px;
 }
 
 .screenshot {
@@ -96,10 +95,9 @@ a {
 	top: 0px;
 	left: 0px;
 	width: 100vw;
-	padding: 10px;
+	padding: 5px 10px 5px 10px;
+	box-sizing: border-box;
 	z-index: 100;
-	height: 1.5em;
-	display: flex;
 	align-items: center;
 	background-image: url("background.jpeg");
 	background-size:400px;
@@ -107,11 +105,96 @@ a {
 	background-attachment: fixed;
 	box-shadow: 0 0 20px rgba(0, 0, 0, 0);
 	transition: 0.2s;
+	display: flex;
 }
 .nav > a {
-	margin-left: 10px;
+	display: block;
+	display: flex;
+	align-items: center;
+	flex:1;
 }
-.nav > img {
+.nav > a > img {
 	width:1.5em;
+	margin-right: 10px;
 }
 
+.right {
+	flex:1;
+	text-align: right;
+	padding: 10px;
+	box-sizing: border-box;
+	display: flex;
+	justify-content: right;
+	align-items: center;
+}
+
+.navLink {
+	padding-bottom: 5px;
+	display: flex;
+}
+.navLinkInner { 
+	padding-bottom: 5px;
+	overflow: hidden;
+	display: inline;
+	overflow: hidden;
+	position: relative;
+}
+.right > .navLink > .navLinkInner > a {
+	overflow: hidden;
+	text-transform: lowercase;
+	flex:1;
+}
+  
+.right > .navLink > .navLinkInner > a::after {
+	content: '';
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 0.1em;
+	background-color: black;
+	opacity: 0;
+	transition: opacity 300ms, transform 300ms;
+}
+.right > .navLink > .navLinkInner > a::after {
+	opacity: 1;
+	transform: translate3d(-100%, 0, 0);
+}
+  
+.right > .navLink > .navLinkInner > a:hover::after,
+.right > .navLink > .navLinkInner > a:focus::after{
+	transform: translate3d(0, 0, 0);
+}
+
+.navLink:not(:last-child)::after {
+	content: "-";
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+.card {
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+	padding: 20px;
+	box-sizing: border-box;
+	margin-bottom: 50px;
+}
+.card > ul > li {
+	text-transform: lowercase;
+	padding-bottom: 10px;
+}
+
+.prices {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+.card > .prices > sub {
+	text-transform: lowercase;
+}
+.card > .prices > sub:nth-child(2n + 1) {
+	font-size: max(12px, 2vmin);
+}
+.card > .prices > sub:nth-child(2n) {
+	font-size: max(12px, 1vmin);
+}

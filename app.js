@@ -4,4 +4,4 @@ setInterval(() => {
     } else {
         document.getElementById("nav").style.boxShadow = ""
     }
-})
+}, 10)
