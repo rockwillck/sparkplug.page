@@ -15,7 +15,7 @@ setInterval(() => {
     frame += direction
     if (frame >= targetStrings[targetString].length + 10) {
         direction = -1
-    } else if (frame <= -10) {
+    } else if (frame <= -2) {
         direction = 1
         targetString = (targetString + 1) % targetStrings.length
     }
