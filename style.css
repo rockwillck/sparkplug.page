@@ -112,6 +112,7 @@ a {
 	display: flex;
 	align-items: center;
 	flex:1;
+	padding-bottom: 5px;
 }
 .nav > a > img {
 	width:1.5em;
@@ -129,11 +130,11 @@ a {
 }
 
 .navLink {
-	padding-bottom: 5px;
 	display: flex;
 }
 .navLinkInner { 
 	padding-bottom: 5px;
+	box-sizing: border-box;
 	overflow: hidden;
 	display: inline;
 	overflow: hidden;
