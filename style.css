@@ -204,3 +204,20 @@ a {
 .card > .prices > sub:nth-child(2n) {
 	font-size: max(12px, 1vmin);
 }
+
+
+.works {
+	display: flex;
+}
+.works > a {
+	flex: 1;
+	margin: 10px;
+	transition: 0.2s;
+}
+.works > a:hover {
+	margin: 5px;
+}
+a > .miniSS {
+	max-width: 100%;
+	border-radius: 10px;
+}
