@@ -1,4 +1,4 @@
-targetStrings = ["indie web developer", "award-winning creatives", "student-founded studio"]
+targetStrings = ["indie web developer", "award-winning creatives", "pioneers of the affordable web"]
 targetString = 0
 frame = 0
 direction = 1
