@@ -102,7 +102,7 @@ a {
 	width: 100vw;
 	padding: 5px 10px 5px 10px;
 	box-sizing: border-box;
-	z-index: 100;
+	z-index: 3;
 	align-items: center;
 	background-image: url("background.jpeg");
 	background-size:400px;
@@ -174,8 +174,8 @@ a {
 
 .navLink:not(:last-child)::after {
 	content: "-";
-	padding-left: 10px;
-	padding-right: 10px;
+	padding-left: 5px;
+	padding-right: 5px;
 }
 
 .card {
@@ -222,4 +222,78 @@ a > .miniSS {
 	max-width: 100%;
 	border-radius: 10px;
 	min-width: 150px;
+}
+
+button:not(.articleContainer) {
+	background-color: transparent;
+	border: none;
+	font-family: inherit;
+	font-size: inherit;
+	text-transform: lowercase;
+	transition: 0.2s;
+	padding: 10px;
+}
+button:not(.articleContainer)::before {
+	content: "-";
+	padding-right: 5px;
+	transition: 0.2s;
+}
+button:not(.articleContainer)::after {
+	content: "-";
+	padding-left: 5px;
+	transition: 0.2s;
+}
+
+button:not(.articleContainer):hover::before {
+	padding-right: 15px;
+}
+button:not(.articleContainer):hover::after {
+	padding-left: 15px;
+}
+
+button:not(.articleContainer):active {
+	background-color: black;
+	color: white;
+}
+
+.article {
+	box-shadow: 0 0 10px black;
+	overflow: scroll;
+	padding: 20px;
+	box-sizing: border-box;
+	font-family: inherit;
+	text-align: left;
+	width: max(250px, 80vw);
+	height: max(250px, 80vh);
+	backdrop-filter: blur(20px);
+	-webkit-backdrop-filter: blur(20px);
+	z-index: 5;
+}
+.articleContainer {
+	font-family: inherit;
+	position: fixed;
+	left: 50%;
+	top: 150%;
+	translate: -50% -50%;
+	width: 100vw;
+	height: 100vh;
+	background-color: transparent;
+	border: none;
+	padding: 0;
+	z-index: 4;
+	transition: 0.2s;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.article > pre {
+	line-height: 20px;
+	font-size: 16px;
+	font-family: inherit;
+	text-transform: lowercase;
+	white-space: pre-wrap;       /* Since CSS 2.1 */
+    white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
+    white-space: -pre-wrap;      /* Opera 4-6 */
+    white-space: -o-pre-wrap;    /* Opera 7 */
+    word-wrap: break-word;       /* Internet Explorer 5.5+ */
 }
